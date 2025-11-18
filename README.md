@@ -1,170 +1,133 @@
 # University-Management-System
-University Management System – SQL Project
+#  University Management System – SQL Project
+
+This project is a **SQL-only University Management System** designed to store, manage, and analyze university-related information. It includes database creation, table relationships, sample data, and a wide range of SQL queries from beginner to advanced level.
+
+---
+
+##  Project Overview
 
-This project is a SQL-based University Management System designed to organize and manage university-related information such as students, faculty, departments, courses, class sections, enrollment, hostels, hostel allocations, and academic performance.
+The goal of this project is to build a complete **relational database** for a university environment using SQL.  
+The system manages:
 
-It includes:
+- Faculty  
+- Departments  
+- Students  
+- Courses  
+- Class Sections  
+- Enrollments & Grades  
+- Hostel & Hostel Allocation  
 
-Database creation
+It also includes analytical queries, ranking functions, and SQL views.
 
-Table structures with relationships
+---
 
-Sample data insertion
+##  Database Schema
 
-SQL queries (basic to advanced)
+### Tables Included
+- `Faculty`
+- `Departments`
+- `Students`
+- `Courses`
+- `ClassSections`
+- `Enrollments`
+- `Hostel`
+- `HostelAllocation`
 
-Views and analytical queries
+Each table contains:
+- Primary keys  
+- Foreign keys  
+- Data integrity constraints  
+- Sample data insertions  
 
-This project is built using pure SQL—no frontend or backend language—making it ideal for learning database design, joins, constraints, and SQL analytics.
+---
 
-Project Objectives
+##  Key Relationships
 
-Design a normalized relational database for university operations
+- One **Faculty** → Many **Departments**  
+- One **Department** → Many **Students**  
+- One **Department** → Many **Courses**  
+- One **Course** → Many **Class Sections**  
+- One **Student** → Many **Enrollments**  
+- One **Hostel** → Many Students via allocation  
 
-Understand and implement primary keys, foreign keys & relationships
+---
 
-Perform CRUD operations (Create, Read, Update, Delete)
+##  SQL Features Demonstrated
 
-Execute analytical queries using aggregate functions, joins, HAVING, subqueries, ranking & views
+###  Basic SQL Queries
+- Retrieve students by gender  
+- Filter by email domain  
+- Students born in a specific year  
+- Students belonging to selected departments  
+- Update phone numbers  
+- Ordering, limiting records  
+- String formatting (UPPER / LOWER)  
+- Calculate student age  
 
-Retrieve useful insights for university administration
+###  Aggregate Functions & Grouping
+- Count students by gender  
+- Students per department  
+- Course-wise grade analysis (SUM, AVG, MIN, MAX)  
 
-Database Structure
-Tables Created
+###  Joins
+- INNER JOIN  
+- LEFT JOIN  
+- Multi-table joins (Students → Enrollments → Courses)  
 
-Faculty
+###  Advanced SQL
+- Subqueries (students above avg grade, youngest student)  
+- Ranking with `RANK()`  
+- Course-wise ranking with `PARTITION BY`  
+- Creating a view `High_Achievers`  
 
-Departments
+---
 
-Students
+##  Insights Generated
 
-Courses
+- Student grade rankings  
+- Department-wise average performance  
+- Course-wise enrollment & grade statistics  
+- Hostel allocation details  
+- High-scoring student list (grade > 85)  
 
-ClassSections
+---
 
-Enrollments
+##  Project File
 
-Hostel
+**University management System-SQL Project.sql** contains:  
+- Database creation  
+- Table creation  
+- Insert queries  
+- 22+ SQL queries  
+- View creation  
+- Ranking & analytical queries  
 
-HostelAllocation
+---
 
-Each table includes:
+##  How to Run This Project
 
-Primary Keys
+1. Install MySQL or any SQL database system  
+2. Open/import the `.sql` file  
+3. Run all table creation and insert queries  
+4. Execute the analytical queries to view results  
+5. Modify or extend as needed  
 
-Foreign Keys enforcing referential integrity
+---
 
-Inserted sample records
+##  Future Enhancements
 
-Entity Relationships
+- Add stored procedures  
+- Implement triggers for automation  
+- Add attendance and fee modules  
+- Build a frontend using Python/Java/PHP  
+- Connect SQL to Power BI or Tableau for dashboards  
 
-One Faculty → Many Departments
+---
 
-One Department → Many Students & Courses
+##  Author
 
-One Course → Many Class Sections
+**Vaishali Ketan Patil**  
+SQL | Data Analyst | Power BI | Database Management  
 
-One Student → Many Enrollments
-
-One Hostel → Many Students (via allocation)
-
-SQL Operations Performed
-Basic SQL Queries
-
-Retrieve students based on gender
-
-Filter students by email, DOB, department
-
-Update student contact details
-
-Order, sort, and limit results
-
-String formatting (UPPER, LOWER)
-
-Calculate student age
-
-Aggregate Functions
-
-COUNT, SUM, AVG, MIN, MAX
-
-Grouping students by gender, department
-
-Course-wise grade analysis
-
-Joins Used
-
-INNER JOIN
-
-LEFT JOIN
-
-Multi-level joins (Students → Enrollments → ClassSections → Courses)
-
-Advanced SQL Features
-
-Subqueries:
-
-Students with grade above average
-
-Youngest student
-
-Ranking Functions:
-
-Overall grade ranking
-
-Course-wise ranking using RANK()
-
-Views:
-
-High_Achievers view for students scoring above 85
-
-Sample Insights Retrieved
-
-Course-wise grade analytics
-
-Department-wise average performance
-
-Student hostel allocation information
-
-Students’ academic ranking
-
-High-performing students list
-
-Project File Included
-
-University management System-SQL Project.sql
-Contains:
-
-Table creation
-
-Insert statements
-
-All queries
-
-View creation
-
-Ranking & analysis queries
-
-How to Run This Project
-
-Install MySQL / MariaDB / SQL Server / Any SQL client
-
-Copy and run the .sql file
-
-Execute queries section-wise to explore the system
-
-Modify or extend the database as needed
-
-Future Enhancements
-
-Add stored procedures
-
-Implement triggers for attendance or grade validation
-
-Build a UI using Python/Java/PHP
-
-Connect SQL database to Power BI for visualization
-
-Author
-
-Vaishali Patil
-SQL | Data Analysis | Power BI | Database Design
+---
